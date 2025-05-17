@@ -1,0 +1,111 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 50 30% 98%;
+    --foreground: 90 10% 15%;
+
+    --card: 50 30% 98%;
+    --card-foreground: 90 10% 15%;
+
+    --popover: 50 30% 98%;
+    --popover-foreground: 90 10% 15%;
+
+    --primary: 110 30% 30%;
+    --primary-foreground: 60 20% 98%;
+
+    --secondary: 40 40% 90%;
+    --secondary-foreground: 40 10% 20%;
+
+    --muted: 60 5% 90%;
+    --muted-foreground: 90 5% 40%;
+
+    --accent: 20 60% 50%;
+    --accent-foreground: 60 20% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 60 20% 98%;
+
+    --border: 90 5% 85%;
+    --input: 90 5% 85%;
+    --ring: 110 30% 30%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 90 10% 15%;
+    --foreground: 60 20% 98%;
+
+    --card: 90 10% 15%;
+    --card-foreground: 60 20% 98%;
+
+    --popover: 90 10% 15%;
+    --popover-foreground: 60 20% 98%;
+
+    --primary: 110 25% 35%;
+    --primary-foreground: 60 20% 98%;
+
+    --secondary: 40 15% 25%;
+    --secondary-foreground: 60 20% 98%;
+
+    --muted: 60 5% 20%;
+    --muted-foreground: 60 5% 70%;
+
+    --accent: 20 50% 45%;
+    --accent-foreground: 60 20% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 60 20% 98%;
+
+    --border: 90 5% 30%;
+    --input: 90 5% 30%;
+    --ring: 110 20% 40%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+.hero-mask {
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1.0) 70%, transparent 100%);
+}
+
+.image-rendering-smooth {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translateZ(0);
+  will-change: transform;
+}
